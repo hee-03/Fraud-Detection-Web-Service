@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FFG — Fin Flow Guard | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-logo">
+        <span class="dot"></span>
+        <span>FFG — Fin Flow Guard</span>
+    </div>
+    <div class="nav-links">
+        <a href="#overview">개요</a>
+        <a href="#ai-model">AI/모델</a>
+        <a href="#techstack">기술스택</a>
+        <a href="#architecture">아키텍처</a>
+        <a href="#api">API 명세</a>
+        <a href="#troubleshooting">트러블슈팅</a>
+        <a href="#setup">배포</a>
+        <a href="#team">팀협업</a>
+        <a href="#future">향후방향</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="overview">
+    <div class="hero">
+
+        <!-- 상단: 좌측 텍스트 + 우측 프로젝트 정보 -->
+        <div class="hero-top">
+            <div class="hero-left fade-up fade-up-1">
+                <div class="hero-label">Web Full-Stack + AI/ML · 2026</div>
+                <h1 class="fade-up fade-up-2">
+                    이상거래<br>
+                    <em>탐&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp지</em><br>
+                    웹서비스
+                </h1>
+                <p class="hero-desc">
+                    Python Flask + XGBoost로 구현한 금융 거래 이상 감지 AI 웹 서비스.<br>
+                    역할 기반 접근 제어, WebSocket 실시간 채팅, 통합 관리 플랫폼을<br>하나의 서비스로 구현한 3인 팀 프로젝트입니다.
+                </p>
+                <div class="hero-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">XGBoost</span>
+                    <span class="tag">SHAP</span>
+                    <span class="tag">Oracle DB</span>
+                    <span class="tag">WebSocket</span>
+                    <span class="tag">Blueprint</span>
+                </div>
+            </div>
+
+            <!-- 우측: 프로젝트 정보 카드 -->
+            <div class="hero-info fade-up fade-up-2">
+                <div class="info-item">
+                    <span class="info-icon">👩🏻</span>
+                    <span class="info-text">박희정</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <span class="info-text">010-8850-7041</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">✉️</span>
+                    <a href="mailto:oeo223@gmail.com" class="info-link">oeo223@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🐙</span>
+                    <a href="https://github.com/hee-03" target="_blank" class="info-link">github.com/hee-03</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📅</span>
+                    <span class="info-text">2026.01.30 ~ 2026.03.25</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">👥</span>
+                    <span class="info-text">3인 팀 프로젝트</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">💻</span>
+                    <span class="info-text">Web Full-Stack + AI/ML</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🎯</span>
+                    <span class="info-text">아키텍처·DB·백엔드 설계 총괄</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 중간: 시연 영상 + 프로젝트 개요 -->
+        <div class="hero-demo fade-up fade-up-3">
+            <div class="hero-video">
+                <div class="video-placeholder">
+                    <div class="video-play-icon">▶</div>
+                    <p class="video-label">시연 영상</p>
+                    <p class="video-hint">YouTube URL을 삽입하거나 영상 파일을 교체하세요</p>
+                    <!-- 영상 준비 시 아래 iframe으로 교체:
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                        frameborder="0" allowfullscreen></iframe>
+                    -->
+                </div>
+            </div>
+            <div class="hero-overview">
+                <div class="overview-label">프로젝트 핵심 포인트</div>
+                <div class="overview-points">
+                    <div class="overview-point">
+                        <span class="point-dot" style="background:var(--accent)"></span>
+                        <span><strong>역할 기반 접근 제어</strong> — 관리자·은행 권한 완전 분리, 서버 단 URL 직접 접근 차단</span>
+                    </div>
+                    <div class="overview-point">
+                        <span class="point-dot" style="background:var(--accent2)"></span>
+                        <span><strong>WebSocket 실시간 채팅</strong> — 관리자↔은행, 동일 은행 내 사용자 간 페이지 이동 없는 양방향 통신</span>
+                    </div>
+                    <div class="overview-point">
+                        <span class="point-dot" style="background:var(--accent3)"></span>
+                        <span><strong>통합 관리 플랫폼</strong> — 대시보드·이상거래 분석의뢰 게시판·채팅·FullCalendar 스케줄러 통합</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단: 지표 카드 1×4 -->
+        <div class="hero-metrics fade-up fade-up-4">
+            <div class="meta-card accent-card">
+                <div class="meta-label">프로젝트 기간</div>
+                <div class="meta-value">약 2개월</div>
+                <div class="meta-sub">2026.01.30 ~ 03.25</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">팀 구성</div>
+                <div class="meta-value">3인</div>
+                <div class="meta-sub">Full-Stack 팀 프로젝트</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">AI 분석 룰</div>
+                <div class="meta-value">5가지</div>
+                <div class="meta-sub">Rule Engine + XGBoost</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">Blueprint 모듈</div>
+                <div class="meta-value">6개</div>
+                <div class="meta-sub">Login · Board · Dashboard · Chat · Scheduler · Transaction</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- AI / MODEL -->
+<section id="ai-model" class="section">
+    <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">AI / 모델 상세</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <!-- 모델 선정 -->
+    <div class="models-grid">
+        <div class="model-card">
+            <div class="model-name">Logistic Regression</div>
+            <div class="model-auc bad">미검토</div>
+            <div class="model-auc-label">비선형 패턴 처리 불가</div>
+            <div class="model-tags">
+                <span class="model-tag con">비선형 불가</span>
+                <span class="model-tag con">불균형 취약</span>
+            </div>
+        </div>
+        <div class="model-card">
+            <div class="model-name">Decision Tree</div>
+            <div class="model-auc bad">미검토</div>
+            <div class="model-auc-label">과적합 경향 강함</div>
+            <div class="model-tags">
+                <span class="model-tag con">과적합 강함</span>
+                <span class="model-tag con">노이즈 민감</span>
+            </div>
+        </div>
+        <div class="model-card">
+            <div class="model-name">Random Forest</div>
+            <div class="model-auc ok">검토</div>
+            <div class="model-auc-label">Bagging 기반</div>
+            <div class="model-tags">
+                <span class="model-tag pro">앙상블 안정적</span>
+                <span class="model-tag con">SMOTE 필요</span>
+                <span class="model-tag con">속도 느림</span>
+            </div>
+        </div>
+        <div class="model-card winner">
+            <div class="model-badge">✓ 최종 선택</div>
+            <div class="model-name">XGBoost</div>
+            <div class="model-auc good">최종 채택</div>
+            <div class="model-auc-label">Boosting 기반</div>
+            <div class="model-tags">
+                <span class="model-tag pro">불균형 강인성</span>
+                <span class="model-tag pro">Regularization</span>
+                <span class="model-tag pro">속도 우수</span>
+                <span class="model-tag pro">Boosting 보정</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- RF vs XGBoost 비교 -->
+    <table class="compare-table">
+        <thead>
+        <tr>
+            <th>비교 항목</th>
+            <th>Random Forest</th>
+            <th class="xgb-col-head">XGBoost ✓</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>학습 방식</td>
+            <td>병렬(Bagging) — 독립 학습 후 다수결</td>
+            <td class="xgb-col">순차(Boosting) — 오차를 다음 트리가 보완</td>
+        </tr>
+        <tr>
+            <td>불균형 데이터 처리</td>
+            <td>별도 전처리 필요 (SMOTE 등)</td>
+            <td class="xgb-col"><span class="win-chip">내장 파라미터</span> Undersampling 병행</td>
+        </tr>
+        <tr>
+            <td>희귀 패턴 학습</td>
+            <td>보통</td>
+            <td class="xgb-col"><span class="win-chip">우수</span> — 오차 집중 학습</td>
+        </tr>
+        <tr>
+            <td>Regularization</td>
+            <td>제한적</td>
+            <td class="xgb-col"><span class="win-chip">지원</span> L1/L2 정규화 내장</td>
+        </tr>
+        <tr>
+            <td>모델 해석</td>
+            <td>Feature Importance</td>
+            <td class="xgb-col"><span class="win-chip">SHAP 시각화</span> 예측 근거 제공</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- 5가지 입력 Feature -->
+    <div class="callout">
+        <strong>5가지 입력 Feature</strong> — Rule Engine이 각 피처를 채점한 뒤 XGBoost 모델 예측에 입력합니다.
+    </div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <div class="feature-name">거래금액 이상점수</div>
+            <div class="feature-desc">평균 대비 이상 금액 Rule 채점</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📍</div>
+            <div class="feature-name">거래장소</div>
+            <div class="feature-desc">Haversine 거리 기반 위치 이상 탐지</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⏰</div>
+            <div class="feature-name">거래시간</div>
+            <div class="feature-desc">Velocity Rule — 단시간 다건 탐지</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎣</div>
+            <div class="feature-name">피싱 패턴</div>
+            <div class="feature-desc">유사성 0~100점 채점</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚫</div>
+            <div class="feature-name">블랙리스트</div>
+            <div class="feature-desc">0/1 이진 플래그</div>
+        </div>
+    </div>
+
+    <!-- 평가 지표 -->
+    <div style="margin-top: 36px;">
+        <div class="section-header">
+            <span class="section-num">01-1</span>
+            <h2 class="section-title" style="font-size:20px;">평가 지표</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-name">이진 분류</div>
+                <div class="metric-value">is_fraud</div>
+                <div class="metric-desc">0 = 정상 / 1 = 이상거래</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-name">사기 확률</div>
+                <div class="metric-value">0~100%</div>
+                <div class="metric-desc">fraud_probability — 실수 확률값 반환</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-name">모델 해석</div>
+                <div class="metric-value">SHAP</div>
+                <div class="metric-desc">Feature importance 시각화로 예측 근거 제공</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- TECH STACK -->
+<section id="techstack" class="section">
+    <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">기술 스택</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="stack-groups">
+        <div class="stack-group">
+            <div class="stack-group-label">Frontend</div>
+            <div class="stack-tags">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">JavaScript ES6+</span>
+                <span class="stack-tag">Bootstrap</span>
+                <span class="stack-tag">jQuery</span>
+                <span class="stack-tag">Jinja2</span>
+                <span class="stack-tag">Chart.js</span>
+                <span class="stack-tag">FullCalendar</span>
+            </div>
+        </div>
+        <div class="stack-group">
+            <div class="stack-group-label">Backend</div>
+            <div class="stack-tags">
+                <span class="stack-tag accent">Python</span>
+                <span class="stack-tag accent">Flask</span>
+                <span class="stack-tag accent">Flask Blueprint</span>
+                <span class="stack-tag">RESTful API</span>
+                <span class="stack-tag">Session Auth</span>
+                <span class="stack-tag">Flask-Mail</span>
+                <span class="stack-tag">oracledb</span>
+            </div>
+        </div>
+        <div class="stack-group">
+            <div class="stack-group-label">Database</div>
+            <div class="stack-tags">
+                <span class="stack-tag blue">Oracle Database</span>
+                <span class="stack-tag">SQL Developer</span>
+                <span class="stack-tag">DBeaver</span>
+            </div>
+        </div>
+        <div class="stack-group">
+            <div class="stack-group-label">AI / ML</div>
+            <div class="stack-tags">
+                <span class="stack-tag accent">XGBoost</span>
+                <span class="stack-tag accent">SHAP</span>
+                <span class="stack-tag">pandas</span>
+                <span class="stack-tag">scikit-learn</span>
+                <span class="stack-tag">joblib</span>
+                <span class="stack-tag">matplotlib</span>
+            </div>
+        </div>
+        <div class="stack-group">
+            <div class="stack-group-label">실시간 통신</div>
+            <div class="stack-tags">
+                <span class="stack-tag blue">WebSocket</span>
+            </div>
+        </div>
+        <div class="stack-group">
+            <div class="stack-group-label">협업 도구</div>
+            <div class="stack-tags">
+                <span class="stack-tag">Git</span>
+                <span class="stack-tag">GitHub</span>
+                <span class="stack-tag">PyCharm</span>
+                <span class="stack-tag">IntelliJ</span>
+                <span class="stack-tag">VS Code</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ARCHITECTURE -->
+<section id="architecture" class="section">
+    <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">시스템 아키텍처</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="tl-wrap">
+        <div class="tl-phase-label">클라이언트 → 백엔드</div>
+
+        <div class="tl-row">
+            <div class="tl-spine">
+                <div class="tl-dot tl-dot-sky">1</div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-card">
+                <div class="tl-icon">🌐</div>
+                <div class="tl-body">
+                    <div class="tl-title">클라이언트 (Chrome)</div>
+                    <div class="tl-desc">HTML/JS/Jinja2 프론트엔드. Chart.js 시각화, FullCalendar 스케줄러 렌더링</div>
+                    <div class="tl-chips">
+                        <span class="tl-chip">Chart.js</span>
+                        <span class="tl-chip">FullCalendar</span>
+                        <span class="tl-chip">Bootstrap</span>
+                        <span class="tl-chip">jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tl-row">
+            <div class="tl-spine">
+                <div class="tl-dot tl-dot-blue">2</div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-card">
+                <div class="tl-icon">🛡</div>
+                <div class="tl-body">
+                    <div class="tl-title">Flask Backend — Blueprint 모듈화 + 인증·권한 제어</div>
+                    <div class="tl-desc">HTTP/JSON REST API. Session 기반 인증. 관리자·은행 권한 완전 분리. @login_required 데코레이터로 URL 직접 접근 차단</div>
+                    <div class="tl-chips">
+                        <span class="tl-chip">Login Blueprint</span>
+                        <span class="tl-chip">Board Blueprint</span>
+                        <span class="tl-chip">Dashboard Blueprint</span>
+                        <span class="tl-chip">Chat Blueprint</span>
+                        <span class="tl-chip">Scheduler Blueprint</span>
+                        <span class="tl-chip">Transaction Blueprint</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tl-row">
+            <div class="tl-spine">
+                <div class="tl-dot tl-dot-light">3</div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-card">
+                <div class="tl-icon">🗄</div>
+                <div class="tl-body">
+                    <div class="tl-title">Oracle Database</div>
+                    <div class="tl-desc">bank_code 기반 멀티테넌시 데이터 격리. 주요 테이블 5종</div>
+                    <div class="tl-chips">
+                        <span class="tl-chip">FFG_MEMBER</span>
+                        <span class="tl-chip">FFG_TX_DATA</span>
+                        <span class="tl-chip">FFG_BOARD</span>
+                        <span class="tl-chip">FFG_CHAT</span>
+                        <span class="tl-chip">FFG_SCHEDULE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tl-phase-label" style="margin-top: 8px;">AI 분석 파이프라인</div>
+
+        <div class="tl-row">
+            <div class="tl-spine">
+                <div class="tl-dot tl-dot-warn">4</div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-card">
+                <div class="tl-icon">⚙️</div>
+                <div class="tl-body">
+                    <div class="tl-title">Rule Engine — 5가지 룰 채점</div>
+                    <div class="tl-desc">거래금액 이상점수, Haversine 거리, Velocity Rule, 피싱 패턴 유사성(0~100점), 블랙리스트 여부(0/1) 채점</div>
+                    <div class="tl-chips">
+                        <span class="tl-chip">거래금액</span>
+                        <span class="tl-chip">거래장소</span>
+                        <span class="tl-chip">거래시간</span>
+                        <span class="tl-chip">피싱 패턴</span>
+                        <span class="tl-chip">블랙리스트</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tl-row">
+            <div class="tl-spine">
+                <div class="tl-dot tl-dot-green">5</div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-card">
+                <div class="tl-icon">🧠</div>
+                <div class="tl-body">
+                    <div class="tl-title">XGBoost 예측 → SHAP 시각화 → 결과 JSON 반환</div>
+                    <div class="tl-desc">is_fraud(0/1) + fraud_probability(0~100%) 예측. SHAP Base64 이미지 포함 JSON 반환 → 프론트 그래프 렌더링</div>
+                    <div class="tl-chips">
+                        <span class="tl-chip">is_fraud</span>
+                        <span class="tl-chip">fraud_probability</span>
+                        <span class="tl-chip">SHAP 이미지 Base64</span>
+                        <span class="tl-chip">model.pkl</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tl-phase-label" style="margin-top: 8px;">실시간 통신</div>
+
+        <div class="tl-row tl-row-last">
+            <div class="tl-spine">
+                <div class="tl-dot tl-dot-blue">6</div>
+            </div>
+            <div class="tl-card">
+                <div class="tl-icon">💬</div>
+                <div class="tl-body">
+                    <div class="tl-title">WebSocket — 실시간 채팅 모달</div>
+                    <div class="tl-desc">관리자↔은행, 동일 은행 내 사용자 간 페이지 이동 없는 실시간 양방향 커뮤니케이션</div>
+                    <div class="tl-chips">
+                        <span class="tl-chip">관리자 ↔ 은행</span>
+                        <span class="tl-chip">동일 은행 내 사용자</span>
+                        <span class="tl-chip">채팅 모달 UI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- API -->
+<section id="api" class="section">
+    <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">API 명세</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="callout">
+        <strong>인증 방식:</strong> Session-Based Authentication (Flask session) · 응답 포맷: JSON (AI 분석 결과, SHAP 이미지 Base64 포함) ·
+        에러 처리: 권한 없음 → 로그인 페이지 리다이렉트, 모델 미로드 → <code style="font-family:var(--font-mono);font-size:12px;">{"error": "모델이 로드되지 않았습니다."}</code>
+    </div>
+
+    <div class="endpoints-list">
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <span class="endpoint-path">/login</span>
+            <span class="endpoint-desc">은행코드 / 아이디 / 비밀번호 인증</span>
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <span class="endpoint-path">/main_admin</span>
+            <span class="endpoint-desc">관리자 대시보드</span>
+            <span class="endpoint-badge">관리자 전용</span>
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <span class="endpoint-path">/main_bank</span>
+            <span class="endpoint-desc">은행 대시보드 — bank_code 기반 데이터 필터</span>
+            <span class="endpoint-badge">은행 전용</span>
+        </div>
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <span class="endpoint-path">/admin_data_input</span>
+            <span class="endpoint-desc">거래 데이터 입력 및 AI 이상거래 분석 요청</span>
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <span class="endpoint-path">/error_detail</span>
+            <span class="endpoint-desc">이상거래 고객 상세 데이터 조회</span>
+        </div>
+        <div class="endpoint">
+            <span class="method both">GET/POST</span>
+            <span class="endpoint-path">/boardList/&lt;board_type&gt;</span>
+            <span class="endpoint-desc">게시판 목록 조회 · 등록 · 수정 · 삭제 (CRUD)</span>
+        </div>
+        <div class="endpoint">
+            <span class="method ws">WS</span>
+            <span class="endpoint-path">/chat</span>
+            <span class="endpoint-desc">WebSocket 실시간 채팅 (관리자↔은행, 동일 은행 내)</span>
+        </div>
+        <div class="endpoint">
+            <span class="method both">GET/POST</span>
+            <span class="endpoint-path">/scheduler</span>
+            <span class="endpoint-desc">일정 CRUD + 출퇴근 기록 관리</span>
+        </div>
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- TROUBLESHOOTING -->
+<section id="troubleshooting" class="section">
+    <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">개발 중 주요 이슈 & 해결 - 트러블슈팅</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="issues-list">
+
+        <div class="issue-card">
+            <div class="issue-header">
+                <div class="issue-icon">📁</div>
+                <div class="issue-title">파일 업/다운로드 경로 불일치</div>
+            </div>
+            <div class="issue-body">
+                <div class="issue-section">
+                    <h5>원인</h5>
+                    <p>파일 저장 경로를 절대 경로로 하드코딩하여 팀원마다 로컬 경로가 달라 파일 기능이 정상 작동하지 않음</p>
+                </div>
+                <div class="issue-section">
+                    <h5>해결</h5>
+                    <p>프로젝트 루트 기준 상대 경로로 전면 변경</p>
+                    <div class="code-snippet">UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'static/uploads')</div>
+                </div>
+                <div class="issue-section">
+                    <h5>성과</h5>
+                    <div class="issue-outcome">✅ 모든 개발 환경에서 파일 업로드·다운로드 정상 동작</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="issue-card">
+            <div class="issue-header">
+                <div class="issue-icon">🔑</div>
+                <div class="issue-title">은행코드 PK 중복 제약으로 동일 은행 다중 계정 생성 불가</div>
+            </div>
+            <div class="issue-body">
+                <div class="issue-section">
+                    <h5>원인</h5>
+                    <p>bank_code 컬럼에 PK 제약 설정으로 같은 은행 소속의 여러 직원 계정을 만들 수 없음</p>
+                </div>
+                <div class="issue-section">
+                    <h5>해결</h5>
+                    <p>bank_code 컬럼의 PK 제약 해제, 복합 키 또는 별도 member_id PK로 DB 재설계</p>
+                </div>
+                <div class="issue-section">
+                    <h5>성과</h5>
+                    <div class="issue-outcome">✅ 동일 은행 소속 복수 계정 정상 등록 가능</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="issue-card">
+            <div class="issue-header">
+                <div class="issue-icon">🔓</div>
+                <div class="issue-title">로그아웃 후 관리자 대시보드 재진입 가능 (세션 미삭제)</div>
+            </div>
+            <div class="issue-body">
+                <div class="issue-section">
+                    <h5>원인</h5>
+                    <p>로그아웃 시 세션이 완전히 삭제되지 않아 URL 직접 접근으로 관리자 페이지에 재진입 가능</p>
+                </div>
+                <div class="issue-section">
+                    <h5>해결</h5>
+                    <p>로그아웃 라우트에서 session.clear() 명시적 호출 및 모든 보호 라우트에 @login_required 데코레이터 적용</p>
+                    <div class="code-snippet">session.clear()  # 로그아웃 라우트
+                        @login_required  # 모든 보호 라우트</div>
+                </div>
+                <div class="issue-section">
+                    <h5>성과</h5>
+                    <div class="issue-outcome">✅ 로그아웃 후 보호 페이지 접근 시 로그인 페이지로 강제 리다이렉트</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="issue-card">
+            <div class="issue-header">
+                <div class="issue-icon">🤖</div>
+                <div class="issue-title">AI 모델 파일 미존재로 신규 환경에서 서버 기동 실패</div>
+            </div>
+            <div class="issue-body">
+                <div class="issue-section">
+                    <h5>원인</h5>
+                    <p>Git에 학습된 모델 파일(.pkl)이 포함되지 않아 새 환경에서 바로 실행하면 모델 로드 오류 발생</p>
+                </div>
+                <div class="issue-section">
+                    <h5>해결</h5>
+                    <p>README에 최초 실행 전 모델 학습·저장 스크립트 실행 필수 명시, 모델 미존재 시 예외 처리 추가</p>
+                    <div class="code-snippet">{"error": "모델이 로드되지 않았습니다."}</div>
+                </div>
+                <div class="issue-section">
+                    <h5>성과</h5>
+                    <div class="issue-outcome">✅ 신규 환경 온보딩 절차 명확화 및 서비스 안정성 향상</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- SETUP -->
+<section id="setup" class="section">
+    <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">실행 / 배포 가이드</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="setup-steps">
+        <div class="setup-step">
+            <div class="step-num">1</div>
+            <div class="setup-step-content">
+                <h5>의존성 설치</h5>
+                <p>프로젝트에 필요한 Python 패키지를 설치합니다.</p>
+                <div class="code-block"><span class="cmd">pip install</span> flask oracledb flask-mail xgboost shap pandas scikit-learn joblib matplotlib</div>
+            </div>
+        </div>
+        <div class="setup-step">
+            <div class="step-num">2</div>
+            <div class="setup-step-content">
+                <h5>DB 설정</h5>
+                <p>Oracle DB 연결 정보를 config.py에 입력 후 DDL 스크립트를 실행하여 테이블을 생성합니다.</p>
+                <div class="code-block"><span class="comment"># config.py 에 Oracle 연결 정보 입력</span>
+                    <span class="comment"># DDL 스크립트 실행으로 테이블 생성</span>
+                    <span class="str">FFG_MEMBER, FFG_TX_DATA, FFG_BOARD, FFG_CHAT, FFG_SCHEDULE</span></div>
+            </div>
+        </div>
+        <div class="setup-step">
+            <div class="step-num">3</div>
+            <div class="setup-step-content">
+                <h5>AI 모델 학습 (최초 1회 필수)</h5>
+                <p>학습 스크립트를 실행하여 model.pkl을 생성합니다. Git에는 .pkl 파일이 포함되지 않으므로 반드시 먼저 실행해야 합니다.</p>
+                <div class="code-block"><span class="cmd">python</span> train_model.py
+                    <span class="comment"># → model.pkl 생성 완료</span></div>
+            </div>
+        </div>
+        <div class="setup-step">
+            <div class="step-num">4</div>
+            <div class="setup-step-content">
+                <h5>서버 실행</h5>
+                <p>Flask 개발 서버 또는 flask 명령으로 실행합니다.</p>
+                <div class="code-block"><span class="cmd">python</span> app.py
+                    <span class="comment"># 또는</span>
+                    <span class="cmd">flask run</span> --host=0.0.0.0 --port=5000</div>
+            </div>
+        </div>
+        <div class="setup-step">
+            <div class="step-num">5</div>
+            <div class="setup-step-content">
+                <h5>접속 및 로그인</h5>
+                <p>브라우저에서 접속 후 관리자 계정(은행코드: 01)으로 로그인합니다.</p>
+                <div class="code-block"><span class="str">http://ip:5000/login</span>
+                    <span class="comment"># 관리자 계정: 은행코드 01</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- TEAM -->
+<section id="team" class="section">
+    <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">팀 협업</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="team-grid">
+        <div class="team-card">
+            <div class="team-role-badge">PM · Frontend</div>
+            <div class="team-name">손세진</div>
+            <div class="team-tasks">
+                <div class="team-task">PM, UI/UX 설계 총괄</div>
+                <div class="team-task">메인 대시보드 구현</div>
+                <div class="team-task">FAQ · 스케줄러 구현</div>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-role-badge">Backend · AI</div>
+            <div class="team-name">김담현</div>
+            <div class="team-tasks">
+                <div class="team-task">공지사항·커뮤니티 게시판 CRUD</div>
+                <div class="team-task">AI 데이터셋 구축 · 연동</div>
+                <div class="team-task">PPT 제작</div>
+            </div>
+        </div>
+        <div class="team-card me">
+            <div class="team-role-badge">Architecture · Backend · QA</div>
+            <div class="team-name">박희정 (본인)</div>
+            <div class="team-tasks">
+                <div class="team-task">시스템 아키텍처 · DB 설계 총괄</div>
+                <div class="team-task">테스트 시나리오 제작 · QA</div>
+                <div class="team-task">WebSocket 실시간 채팅 구현</div>
+                <div class="team-task">Git 버전 관리 체계 구축</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collab-cards">
+        <div class="collab-card">
+            <h5>🌿 브랜치 전략</h5>
+            <p>Git 기능별 브랜치로 분리하여 충돌 최소화. GitHub 원격 저장소를 중심으로 통합 관리. feature 브랜치 작업 후 main으로 머지하는 방식으로 진행했습니다.</p>
+        </div>
+        <div class="collab-card">
+            <h5>🔄 코드 리뷰 & 테스트</h5>
+            <p>주간 크로스 테스트로 개발자↔테스터 역할을 교차하여 서로의 기능을 검증했습니다. 피드백 반영 후 머지하는 사이클을 유지했습니다.</p>
+        </div>
+    </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- FUTURE -->
+<section id="future" class="section">
+    <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">향후 고도화 방향</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="future-grid">
+        <div class="future-card">
+            <div class="future-icon">🔄</div>
+            <div class="future-title">Vue.js + Spring Boot 전환</div>
+            <div class="future-desc">Jinja2 서버사이드 렌더링 → Vue.js SPA + Spring Boot REST API 분리 (일부 화면 변환 완료)</div>
+        </div>
+        <div class="future-card">
+            <div class="future-icon">📊</div>
+            <div class="future-title">실시간 스트리밍 이상탐지</div>
+            <div class="future-desc">Apache Kafka 또는 WebSocket 기반 거래 데이터 스트리밍으로 배치 방식 대비 탐지 지연 시간 단축</div>
+        </div>
+        <div class="future-card">
+            <div class="future-icon">🧠</div>
+            <div class="future-title">AI 모델 고도화</div>
+            <div class="future-desc">단일 XGBoost → 앙상블 또는 LSTM 추가 실험. SMOTE 불균형 처리 전략 적용으로 탐지 정밀도 향상</div>
+        </div>
+        <div class="future-card">
+            <div class="future-icon">🏦</div>
+            <div class="future-title">멀티테넌시 강화</div>
+            <div class="future-desc">은행별 완전 격리된 데이터 환경 및 API 키 기반 외부 연동 지원으로 실제 금융기관 납품 수준의 보안 아키텍처 구현</div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-left">
+        <strong>💧 FFG — Fin Flow Guard</strong><br>
+        <span>Web Full-Stack + AI/ML Portfolio · 2026 · 박희정</span>
+    </div>
+    <div class="footer-right">
+        <span class="footer-badge">Flask</span>
+        <span class="footer-badge">XGBoost</span>
+        <span class="footer-badge">Oracle DB</span>
+        <span class="footer-badge">WebSocket</span>
+    </div>
+</footer>
+
+</body>
+</html>
